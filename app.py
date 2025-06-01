@@ -22,8 +22,8 @@ from LSTM1 import LSTM1
 from Prophet1 import get_prophet_predict
 
 
-st.title('Stock Price Predictions')
-st.sidebar.info('Welcome to the Stock Price Prediction App. Choose your options below')
+st.title('Financial Data Crawling System')
+st.sidebar.info('Welcome to the Financial Data Crawling App. Choose your options below')
 
 def main():
     option = st.sidebar.selectbox('Make a choice', ['Visualize','Recent Data', 'Predict'])

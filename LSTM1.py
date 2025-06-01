@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 import torch
+torch.classes.__path__ = []
 import torch.nn as nn
 from torch.autograd import Variable
 from sklearn.preprocessing import StandardScaler
