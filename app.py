@@ -169,7 +169,7 @@ def model_engine( num, mode):
     if mode == 'LSTM':
         y_test, preds, model, forecast_pred = LSTM1(data,num )
     elif mode == 'Prophet':
-        y_test, preds, model, forecast_pred  = get_prophet_predict(data,num)
+        y_test, preds, model, forecast_pred  = get_prophet_predict(data,num,['Volume', 'Change'])#['Open', 'High', 'Low', 'Volume', 'Change','upper_band','lower_band']#
     else:
         model.fit(x_train, y_train)
         preds = model.predict(x_test)
