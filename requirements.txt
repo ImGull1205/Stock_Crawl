@@ -1,0 +1,11 @@
+streamlit
+scikit-learn
+pandas
+ta
+xgboost
+vnstock
+torch
+bs4
+seaborn
+prophet
+
