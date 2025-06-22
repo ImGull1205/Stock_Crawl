@@ -48,8 +48,8 @@ def LSTM1(data,num):
     scaler = MinMaxScaler(feature_range=(0, 1))
     scaled_data = scaler.fit_transform(dataset)
 
-    # Split into training and test sets (80% train, 20% test)
-    train_size = int(len(scaled_data) * 0.98)
+    # Split into training and test sets 
+    train_size = int(len(scaled_data) * 0.8)
     train_data = scaled_data[:train_size]
     test_data = scaled_data[train_size:]
 
@@ -82,7 +82,7 @@ def LSTM1(data,num):
     optimizer = optim.Adam(model.parameters(), lr=0.001)
     
     # Training loop with early stopping and saving the best model
-    num_epochs = 50
+    num_epochs = 200
     best_val_loss = float('inf')
     best_model_state = None
     patience = 10
